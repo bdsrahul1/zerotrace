@@ -25,25 +25,25 @@ Every attack leaves evidence — we trace it from initial unknown indicator to c
 
 ```
 .
-├── index.html        # Main landing page
-├── styles.css        # Zero Trace custom dark theme & design system
-├── script.js         # Interactive canvas, particle vortex, scroll animations & interactive orbit
-├── logo.png          # Zero Trace logo artwork
-├── cases/            # Interactive HTML case files & reverse engineering reports
-│   ├── dcrat-breaking-the-mirror.html
-│   ├── emotet-blog.html
-│   ├── process-injection-explained.html
-│   ├── risen-ransomware-doxware.html
+├── index.html                            # Main landing page
+├── styles.css                            # Zero Trace custom dark theme & design system
+├── script.js                             # Interactive canvas, particle vortex, scroll animations & orbit
+├── logo.png                              # Zero Trace logo artwork
+├── cases/                                # Interactive HTML case files & reverse engineering reports
+│   ├── DCRat Breaking the Mirror.html
+│   ├── Risen_ransomeware_doxwarepdf.html
+│   ├── emotet blog.html
+│   ├── process_injection explained.html
 │   └── sarwent.html
-├── .gitignore        # Git ignore directives
-└── .nojekyll         # GitHub Pages Jekyll bypass flag
+├── .gitignore                            # Git ignore directives
+└── .nojekyll                             # GitHub Pages Jekyll bypass flag
 ```
 
 ---
 
 ## 💻 Local Development / Preview
 
-No complex build pipeline required. Simply serve using any standard static file server:
+No complex build pipeline required. Simply serve using any static file server:
 
 ```bash
 # Using Python
