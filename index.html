@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="ZERO TRACE — cybersecurity research: malware analysis, reverse engineering, OSINT & threat intelligence. Find what they left behind." />
+<!-- Open Graph / Social Cards -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ZERO TRACE — Find what they left behind." />
+<meta property="og:description" content="ZERO TRACE — cybersecurity research: malware analysis, reverse engineering, OSINT & threat intelligence." />
+<meta property="og:image" content="logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ZERO TRACE — Find what they left behind." />
+<meta name="twitter:description" content="ZERO TRACE — cybersecurity research: malware analysis, reverse engineering, OSINT & threat intelligence." />
+<meta name="twitter:image" content="logo.png" />
+<title>ZERO TRACE — Find what they left behind.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cinematic boot intro -->
+  <div id="intro" class="intro" aria-hidden="true">
+    <div class="intro-core">
+      <span class="intro-dot"></span>
+      <span class="intro-word" id="introWord">ZERO TRACE</span>
+      <span class="intro-tag" id="introTag">FIND WHAT THEY LEFT BEHIND</span>
+    </div>
+    <span class="intro-skip">CLICK TO ENTER</span>
+  </div>
+
+  <!-- Film-grade overlays -->
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Vortex particle field -->
+  <canvas id="vortex" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-rail" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <!-- Nav -->
+  <header class="nav">
+    <a class="brand" href="#void">
+      <span class="brand-mark"></span>
+      ZERO&nbsp;TRACE
+    </a>
+    <nav class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#connect">Intelligence</a>
+      <a href="#tools">Tools</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 01 VOID / HERO -->
+    <section id="void" class="scene hero">
+      <div class="hero-figure">
+        <img src="logo.png" alt="ZERO TRACE" class="hero-logo" />
+        <div class="hero-glow" aria-hidden="true"></div>
+      </div>
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Cyber Intelligence · Est. Field Notes</span>
+        <h1 class="hero-title">FIND WHAT THEY<br />LEFT BEHIND.</h1>
+        <p class="hero-sub">
+          Malware analysis · Reverse engineering · OSINT · Threat intelligence.
+          Every attack leaves evidence — we trace it.
+        </p>
+        <div class="hero-actions">
+          <a href="#investigate" class="btn btn-amber">Begin the trace</a>
+          <a href="#research" class="btn btn-ghost">Read case files</a>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <span>SCROLL TO INVESTIGATE</span><i></i>
+      </div>
+    </section>
+
+    <!-- 03 TRACE -->
+    <section id="trace" class="scene trace">
+      <div class="section-index">01 / TRACE</div>
+      <div class="trace-inner reveal">
+        <h2 class="section-title">From <em>unknown</em> to <em>attribution.</em></h2>
+        <ol class="trace-flow">
+          <li><span>UNKNOWN</span></li>
+          <li><span>TRACE</span></li>
+          <li><span>CORRELATE</span></li>
+          <li><span>ANALYZE</span></li>
+          <li><span>ATTRIBUTE</span></li>
+        </ol>
+        <p class="section-lede">
+          A single artifact is a thread. Pulled carefully, it unravels an entire
+          operation — the infrastructure, the tooling, and eventually the actor.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02 EVIDENCE ORBIT -->
+    <section id="orbit" class="scene orbit-scene">
+      <div class="section-index">02 / EVIDENCE ORBIT</div>
+      <div class="orbit-wrap reveal">
+        <div class="orbit">
+          <div class="orbit-core">
+            <span>ZERO</span>
+            <small>TRACE</small>
+          </div>
+          <div class="orbit-ring ring-1" aria-hidden="true"></div>
+          <div class="orbit-ring ring-2" aria-hidden="true"></div>
+          <div class="orbit-ring ring-3" aria-hidden="true"></div>
+          <button class="node n1" data-info="Passive DNS, WHOIS pivots, registration clusters.">DOMAIN</button>
+          <button class="node n2" data-info="Hosting, ASN, reverse-IP neighbours, netflow.">IP</button>
+          <button class="node n3" data-info="TLS fingerprints, issuer chains, JARM overlaps.">CERTIFICATE</button>
+          <button class="node n4" data-info="Static + dynamic analysis, unpacked payloads.">MALWARE</button>
+          <button class="node n5" data-info="Shared TTPs, timelines, victimology.">CAMPAIGN</button>
+          <button class="node n6" data-info="SHA-256, imphash, ssdeep, section entropy.">HASH</button>
+        </div>
+        <aside class="orbit-readout">
+          <h3 class="section-title small">One artifact.<br />Six pivots.</h3>
+          <p class="section-lede">
+            The evidence orbit is not decoration — it is the shape of an
+            investigation. Select a node to see how one indicator opens the next.
+          </p>
+          <p class="orbit-detail" id="orbitDetail">
+            Hover or tap a node to inspect the pivot.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 04 INVESTIGATE -->
+    <section id="investigate" class="scene investigate">
+      <div class="section-index">03 / DISCIPLINES</div>
+      <h2 class="section-title reveal">Four ways to read what they left behind.</h2>
+      <div class="disc-grid">
+        <article class="disc reveal">
+          <span class="disc-tag">01</span>
+          <h3>Malware Analysis</h3>
+          <p>Unpacking loaders, decoding configs, and mapping capability to
+             behaviour — from first stage to final payload.</p>
+        </article>
+        <article class="disc reveal">
+          <span class="disc-tag">02</span>
+          <h3>Reverse Engineering</h3>
+          <p>Disassembly and decompilation of the unknown, recovering algorithms,
+             protocols, and the intent behind the code.</p>
+        </article>
+        <article class="disc reveal">
+          <span class="disc-tag">03</span>
+          <h3>OSINT</h3>
+          <p>Open-source correlation of infrastructure, personas, and leaks into a
+             single, defensible picture.</p>
+        </article>
+        <article class="disc reveal">
+          <span class="disc-tag">04</span>
+          <h3>Threat Intelligence</h3>
+          <p>Turning scattered indicators into attribution, tracking actors and
+             campaigns across time.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 05 EVIDENCE -->
+    <section id="evidence" class="scene evidence">
+      <div class="section-index">04 / EVIDENCE</div>
+      <div class="evidence-inner reveal">
+        <h2 class="section-title">The sample doesn't lie.</h2>
+        <div class="dossier">
+          <div class="dossier-row">
+            <span class="k">SHA-256</span>
+            <span class="v mono">8d6c2f4a09b1e7c3&hellip;a41f</span>
+          </div>
+          <div class="dossier-row">
+            <span class="k">FORMAT</span>
+            <span class="v">PE32+ · Windows x64</span>
+          </div>
+          <div class="dossier-row">
+            <span class="k">FIRST OBSERVED</span>
+            <span class="v">2026-02-14 · 03:11 UTC</span>
+          </div>
+          <div class="dossier-row">
+            <span class="k">MITRE ATT&CK</span>
+            <span class="v"><i>T1059</i><i>T1105</i><i>T1547</i></span>
+          </div>
+          <div class="dossier-row">
+            <span class="k">VERDICT</span>
+            <span class="v verdict">LOADER · STAGED C2</span>
+          </div>
+        </div>
+        <a href="#research" class="btn btn-ghost">Read the case file →</a>
+      </div>
+    </section>
+
+    <!-- 06 CONNECT -->
+    <section id="connect" class="scene connect">
+      <div class="section-index">05 / CONNECT</div>
+      <h2 class="section-title reveal">Everything traces back to an actor.</h2>
+      <div class="graph reveal">
+        <span class="g-node g-actor">ACTOR</span>
+        <span class="g-node g-a">MALWARE</span>
+        <span class="g-node g-b">DOMAIN</span>
+        <span class="g-node g-c">IP</span>
+        <span class="g-node g-d">CAMPAIGN</span>
+        <svg class="g-lines" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="400" y1="200" x2="150" y2="90" />
+          <line x1="400" y1="200" x2="650" y2="90" />
+          <line x1="400" y1="200" x2="150" y2="310" />
+          <line x1="400" y1="200" x2="650" y2="310" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- 07 RESEARCH -->
+    <section id="research" class="scene research">
+      <div class="section-index">06 / RESEARCH</div>
+      <h2 class="section-title reveal">Case files.</h2>
+      <div class="case-list">
+        <a class="case reveal" href="cases/dcrat-breaking-the-mirror.html">
+          <div class="case-body">
+            <h3>DCRat — Breaking the Mirror</h3>
+          </div>
+          <span class="case-tag">REVERSE ENGINEERING</span>
+          <span class="case-go">→</span>
+        </a>
+        <a class="case reveal" href="cases/risen-ransomware-doxware.html">
+          <div class="case-body">
+            <h3>Risen Ransomware &amp; Doxware</h3>
+          </div>
+          <span class="case-tag">REVERSE ENGINEERING</span>
+          <span class="case-go">→</span>
+        </a>
+        <a class="case reveal" href="cases/emotet-blog.html">
+          <div class="case-body">
+            <h3>Emotet — Anatomy of a Loader</h3>
+          </div>
+          <span class="case-tag">REVERSE ENGINEERING</span>
+          <span class="case-go">→</span>
+        </a>
+        <a class="case reveal" href="cases/sarwent.html">
+          <div class="case-body">
+            <h3>Sarwent — The Quiet Backdoor</h3>
+          </div>
+          <span class="case-tag">REVERSE ENGINEERING</span>
+          <span class="case-go">→</span>
+        </a>
+        <a class="case reveal" href="cases/process-injection-explained.html">
+          <div class="case-body">
+            <h3>Process Injection Explained</h3>
+          </div>
+          <span class="case-tag">REVERSE ENGINEERING</span>
+          <span class="case-go">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 08 TOOLS -->
+    <section id="tools" class="scene research">
+      <div class="section-index">07 / TOOLS</div>
+      <h2 class="section-title reveal">Tools.</h2>
+      <div class="case-list">
+        <a class="case reveal" href="https://github.com/bdsrahul1/Friday" target="_blank" rel="noopener">
+          <div class="case-body">
+            <h3>Friday</h3>
+          </div>
+          <span class="case-tag">GITHUB</span>
+          <span class="case-go">→</span>
+        </a>
+        <a class="case reveal" href="https://github.com/bdsrahul1/simi" target="_blank" rel="noopener">
+          <div class="case-body">
+            <h3>simi</h3>
+          </div>
+          <span class="case-tag">GITHUB</span>
+          <span class="case-go">→</span>
+        </a>
+        <a class="case reveal" href="https://github.com/bdsrahul1/Griffin" target="_blank" rel="noopener">
+          <div class="case-body">
+            <h3>Griffin</h3>
+          </div>
+          <span class="case-tag">GITHUB</span>
+          <span class="case-go">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 09 END / ARCHIVE -->
+    <section id="archive" class="scene end">
+      <div class="hero-glow end-glow" aria-hidden="true"></div>
+      <div class="end-inner reveal">
+        <span class="brand-mark big"></span>
+        <h2 class="end-title">ZERO TRACE</h2>
+        <p class="end-sub">Find what they left behind.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>ZERO TRACE · Cyber Intelligence</span>
+    <span class="mono">// no artifact goes unread</span>
+    <span>© 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
